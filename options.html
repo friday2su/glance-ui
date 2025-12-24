@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Glance UI Options</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+    
+    h1 {
+      color: #333;
+      border-bottom: 2px solid #4285f4;
+      padding-bottom: 10px;
+    }
+    
+    .option-group {
+      margin: 20px 0;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+    
+    .option-group h3 {
+      margin-top: 0;
+      color: #4285f4;
+    }
+    
+    label {
+      display: block;
+      margin: 10px 0;
+    }
+    
+    input[type="checkbox"] {
+      margin-right: 8px;
+    }
+    
+    button {
+      background-color: #4285f4;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    
+    button:hover {
+      background-color: #3367d6;
+    }
+    
+    .status {
+      margin-top: 15px;
+      padding: 10px;
+      border-radius: 4px;
+      display: none;
+    }
+    
+    .status.success {
+      background-color: #d4edda;
+      color: #155724;
+      display: block;
+    }
+    
+    .status.error {
+      background-color: #f8d7da;
+      color: #721c24;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <h1>Glance UI Settings</h1>
+  
+  <div class="option-group">
+    <h3>Pop Links</h3>
+    <label>
+      <input type="checkbox" id="enablePopLinks" checked> Enable Pop Links (Drag & Drop only)
+    </label>
+    <label>
+      <input type="checkbox" id="showAnimations" checked> Show smooth animations
+    </label>
+    <label>
+      Modal width: 
+      <select id="modalWidth">
+        <option value="85" selected>85%</option>
+        <option value="75">75%</option>
+        <option value="95">95%</option>
+      </select>
+    </label>
+  </div>
+  
+  <div class="option-group">
+    <h3>Vertical Tabs (Coming Soon)</h3>
+    <p>Vertical tab management feature is under development.</p>
+  </div>
+  
+  <button id="saveBtn">Save Settings</button>
+  
+  <div id="status" class="status"></div>
+  
+  <script src="browser-polyfill.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>

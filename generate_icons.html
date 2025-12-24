@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Icons for Glance UI</title>
+</head>
+<body>
+    <h1>Glance UI Icon Generator</h1>
+    <p>Open this page in a browser and save the images below as PNG files in the icons directory.</p>
+    
+    <div>
+        <h3>16x16 Icon</h3>
+        <canvas id="icon16" width="16" height="16"></canvas>
+        <button onclick="downloadCanvas('icon16', 'icon16.png')">Download</button>
+    </div>
+    
+    <div>
+        <h3>48x48 Icon</h3>
+        <canvas id="icon48" width="48" height="48"></canvas>
+        <button onclick="downloadCanvas('icon48', 'icon48.png')">Download</button>
+    </div>
+    
+    <div>
+        <h3>128x128 Icon</h3>
+        <canvas id="icon128" width="128" height="128"></canvas>
+        <button onclick="downloadCanvas('icon128', 'icon128.png')">Download</button>
+    </div>
+
+    <script>
+        function drawIcon(ctx, size) {
+            // Fill background
+            ctx.fillStyle = '#4285f4';
+            ctx.fillRect(0, 0, size, size);
+            
+            // Draw "G" for "Glance"
+            ctx.fillStyle = 'white';
+            ctx.font = `${size/2}px Arial`;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('G', size/2, size/2);
+        }
+        
+        // Draw all icons
+        const icon16 = document.getElementById('icon16');
+        const ctx16 = icon16.getContext('2d');
+        drawIcon(ctx16, 16);
+        
+        const icon48 = document.getElementById('icon48');
+        const ctx48 = icon48.getContext('2d');
+        drawIcon(ctx48, 48);
+        
+        const icon128 = document.getElementById('icon128');
+        const ctx128 = icon128.getContext('2d');
+        drawIcon(ctx128, 128);
+        
+        function downloadCanvas(canvasId, filename) {
+            const canvas = document.getElementById(canvasId);
+            const link = document.createElement('a');
+            link.download = filename;
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }
+    </script>
+</body>
+</html>

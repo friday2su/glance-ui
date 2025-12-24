@@ -1,0 +1,18 @@
+{
+  "name": "glance-ui",
+  "version": "1.0.0",
+  "description": "A browser extension that provides UI enhancements including pop links similar to Arc browser's Glance feature",
+  "main": "background.js",
+  "scripts": {
+    "pack": "zip -r extension.zip manifest.json *.js *.css *.html icons/ -x \"*.md\" \"test.html\" \"generate_icons.html\""
+  },
+  "keywords": [
+    "browser-extension",
+    "chrome-extension",
+    "firefox-extension",
+    "link-preview",
+    "ui-enhancement"
+  ],
+  "author": "Glance UI Team",
+  "license": "MIT"
+}

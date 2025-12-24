@@ -1,0 +1,128 @@
+/* content.css */
+/* Pop link modal styles */
+.glance-ui-pop-link-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw; /* Increased horizontally */
+  height: 88vh; /* Increased vertically */
+  max-width: 1300px; /* Increased max width */
+  max-height: 950px; /* Increased max height */
+  z-index: 2147483647; /* Maximum z-index value */
+  background: #1a1a1a;
+  border-radius: 16px;
+  box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.glance-ui-pop-link-modal.iframe-loaded {
+  background: transparent;
+}
+
+.glance-ui-pop-link-modal iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: #1a1a1a;
+}
+
+/* Custom scrollbar styling */
+.glance-ui-pop-link-modal iframe {
+  scrollbar-width: thin;
+  scrollbar-color: #444 #2a2a2a;
+}
+
+.glance-ui-pop-link-modal iframe::-webkit-scrollbar {
+  width: 6px;
+}
+
+.glance-ui-pop-link-modal iframe::-webkit-scrollbar-track {
+  background: #2a2a2a;
+}
+
+.glance-ui-pop-link-modal iframe::-webkit-scrollbar-thumb {
+  background-color: #444;
+  border-radius: 3px;
+}
+
+/* Control buttons outside the modal - positioned at top right */
+.glance-ui-pop-link-controls {
+  display: flex;
+  flex-direction: column-reverse; /* Reverse the order so open button is above close button */
+  gap: 12px;
+  z-index: 2147483648; /* Higher than modal */
+}
+
+.glance-ui-pop-link-control-btn {
+  width: 40px;
+  height: 40px;
+  border: 0.5px solid #ffffff; /* Reduced to minimal 1px white border */
+  border-radius: 50%; /* Circular */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  background-color: #181818; /* New color */
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: none; /* Remove hover effects */
+}
+
+.glance-ui-pop-link-control-btn:hover {
+  background-color: #181818; /* Same as default, no hover effect */
+}
+
+/* Drag and drop target */
+.glance-ui-drag-target {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px 30px;
+  background: rgba(40, 40, 40, 0.9);
+  border: 2px dashed #ccc; /* Changed to less bright white */
+  border-radius: 8px;
+  color: #ccc;
+  font-size: 16px;
+  font-weight: 500;
+  z-index: 2147483649;
+  backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.glance-ui-drag-target.active {
+  opacity: 1;
+  pointer-events: auto;
+  border-color: #ccc; /* Changed to less bright white */
+  background: rgba(30, 30, 30, 0.95);
+  transform: translateX(-50%) scale(1.05);
+}
+
+.glance-ui-drag-target.drag-over {
+  border-color: #ccc; /* Changed to less bright white */
+  background: rgba(25, 25, 25, 0.95);
+  box-shadow: 0 0 20px rgba(204, 204, 204, 0.4); /* Less bright white glow */
+}
+
+.glance-ui-pop-link-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent; /* Changed to transparent for clean blur only */
+  z-index: 2147483646; /* One less than modal */
+  backdrop-filter: blur(10px); /* Increased blur for cleaner effect */
+  transition: all 0.3s ease;
+}
+
+/* Make body unscrollable when modal is open */
+.glance-ui-modal-open {
+  overflow: hidden;
+}
