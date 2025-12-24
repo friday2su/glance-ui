@@ -21,6 +21,13 @@
   Preview links instantly without losing your place. Glance UI provides a seamless, secure, and intuitive modal experience for exploring content through elegant drag-and-drop interactions.
 </p>
 
+<p align="center">
+  <video width="800" height="300" controls>
+    <source src="assets/demo.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</p>
+
 <br>
 
 ## Overview
