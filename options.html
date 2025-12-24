@@ -5,70 +5,164 @@
   <title>Glance UI Options</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      max-width: 600px;
-      margin: 40px auto;
-      padding: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      max-width: 500px;
+      margin: 30px auto;
+      padding: 25px;
+      background-color: #121212;
+      color: #e0e0e0;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     }
     
     h1 {
-      color: #333;
-      border-bottom: 2px solid #4285f4;
-      padding-bottom: 10px;
+      color: #4CAF50;
+      text-align: center;
+      margin: 0 0 25px 0;
+      font-size: 24px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #333;
     }
     
     .option-group {
-      margin: 20px 0;
-      padding: 15px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      background-color: #f9f9f9;
+      margin: 0 0 25px 0;
+      padding: 20px;
+      border: 1px solid #333;
+      border-radius: 10px;
+      background-color: #1e1e1e;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     }
     
     .option-group h3 {
-      margin-top: 0;
-      color: #4285f4;
+      margin: 0 0 15px 0;
+      color: #66bb6a;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+    }
+    
+    .option-group h3::before {
+      content: "";
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background-color: #4CAF50;
+      border-radius: 50%;
+      margin-right: 10px;
     }
     
     label {
-      display: block;
-      margin: 10px 0;
+      display: flex;
+      align-items: center;
+      margin: 12px 0;
+      padding: 8px 0;
+      color: #b0b0b0;
+      cursor: pointer;
+      transition: color 0.2s;
     }
     
-    input[type="checkbox"] {
+    label:hover {
+      color: #e0e0e0;
+    }
+    
+    label input[type="checkbox"] {
+      margin-right: 12px;
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+    }
+    
+    label select {
+      background-color: #2d2d2d;
+      color: #e0e0e0;
+      border: 1px solid #444;
+      padding: 6px 12px;
+      border-radius: 6px;
+      margin-left: 15px;
+      cursor: pointer;
+    }
+    
+    .github-section {
+      text-align: center;
+      margin-top: 25px;
+      padding-top: 20px;
+      border-top: 1px solid #333;
+    }
+    
+    .github-button {
+      display: inline-block;
+      background-color: #0d1117;
+      color: #f0f6fc;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      border: 1px solid #30363d;
+      transition: all 0.2s;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+    
+    .github-button:hover {
+      background-color: #238636;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    }
+    
+    .github-button:active {
+      transform: translateY(0);
+    }
+    
+    .github-button svg {
       margin-right: 8px;
+      vertical-align: middle;
     }
     
     button {
-      background-color: #4285f4;
+      background-color: #4CAF50;
       color: white;
       border: none;
-      padding: 10px 20px;
-      border-radius: 4px;
+      padding: 12px 25px;
+      border-radius: 8px;
       cursor: pointer;
       font-size: 16px;
+      font-weight: 600;
+      display: block;
+      margin: 25px auto 0;
+      width: 200px;
+      transition: all 0.2s;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     }
     
     button:hover {
-      background-color: #3367d6;
+      background-color: #45a049;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+    }
+    
+    button:active {
+      transform: translateY(0);
     }
     
     .status {
-      margin-top: 15px;
-      padding: 10px;
-      border-radius: 4px;
+      margin-top: 20px;
+      padding: 12px;
+      border-radius: 8px;
       display: none;
+      text-align: center;
+      font-weight: 500;
     }
     
     .status.success {
-      background-color: #d4edda;
-      color: #155724;
+      background-color: rgba(76, 175, 80, 0.15);
+      color: #a5d6a7;
+      border: 1px solid #4CAF50;
       display: block;
     }
     
     .status.error {
-      background-color: #f8d7da;
-      color: #721c24;
+      background-color: rgba(244, 67, 54, 0.15);
+      color: #ef9a9a;
+      border: 1px solid #f44336;
       display: block;
     }
   </style>
@@ -77,29 +171,31 @@
   <h1>Glance UI Settings</h1>
   
   <div class="option-group">
-    <h3>Pop Links</h3>
+    <h3>Extension Features</h3>
     <label>
-      <input type="checkbox" id="enablePopLinks" checked> Enable Pop Links (Drag & Drop only)
+      <input type="checkbox" id="enablePopLinks" checked> Enable Link Preview (Drag & Drop)
     </label>
     <label>
-      <input type="checkbox" id="showAnimations" checked> Show smooth animations
+      <input type="checkbox" id="showAnimations" checked> Enable Smooth Animations
     </label>
     <label>
-      Modal width: 
+      Modal Width: 
       <select id="modalWidth">
-        <option value="85" selected>85%</option>
         <option value="75">75%</option>
+        <option value="85" selected>85%</option>
         <option value="95">95%</option>
       </select>
     </label>
   </div>
   
-  <div class="option-group">
-    <h3>Vertical Tabs (Coming Soon)</h3>
-    <p>Vertical tab management feature is under development.</p>
-  </div>
-  
   <button id="saveBtn">Save Settings</button>
+  
+  <div class="github-section">
+    <a href="https://github.com/yourusername/glance-ui" target="_blank" class="github-button">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C5.78 11.43 4.96 11.1 4.96 9.72C4.96 9.2 5.13 8.7 5.41 8.35C5.35 8.18 5.12 7.48 5.54 6.45C5.54 6.45 6.16 6.25 7.01 6.85C7.67 6.68 8.35 6.68 9.01 6.85C9.86 6.25 10.48 6.45 10.48 6.45C10.9 7.48 10.67 8.18 10.61 8.35C10.89 8.7 11.06 9.2 11.06 9.72C11.06 11.1 10.24 11.43 9.46 11.53C9.78 11.83 10.02 12.37 10.02 13.03C10.02 14.07 10.01 14.8 10.01 15.21C10.01 15.42 10.16 15.66 10.56 15.59C13.71 14.53 16 11.54 16 8C16 3.58 12.42 0 8 0Z" fill="currentColor"/></svg>
+      Star on GitHub
+    </a>
+  </div>
   
   <div id="status" class="status"></div>
   

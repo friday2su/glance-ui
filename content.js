@@ -45,7 +45,8 @@
   // Drag and drop functionality
   // Add dragstart event listener to all links
   document.addEventListener('dragstart', function(event) {
-    if (event.target.tagName === 'A' && event.target.href) {
+    // Only activate if the extension is enabled
+    if (settings.popLinksEnabled !== false && event.target.tagName === 'A' && event.target.href) {
       currentDraggedUrl = event.target.href;
       showDragTarget();
     }
@@ -100,29 +101,35 @@
 
   // Add global drag and drop event listeners
   document.addEventListener('dragover', function(event) {
-    // Keep the drag target visible while dragging
-    if (dragTarget && dragTarget.classList.contains('active')) {
-      // Check if we're near the drag target
-      const rect = dragTarget.getBoundingClientRect();
-      const isNearTarget = (
-        event.clientX >= rect.left &&
-        event.clientX <= rect.right &&
-        event.clientY >= rect.top &&
-        event.clientY <= rect.bottom
-      );
-      
-      if (!isNearTarget) {
-        dragTarget.classList.remove('drag-over');
+    // Only handle dragover if the extension is enabled
+    if (settings.popLinksEnabled !== false) {
+      // Keep the drag target visible while dragging
+      if (dragTarget && dragTarget.classList.contains('active')) {
+        // Check if we're near the drag target
+        const rect = dragTarget.getBoundingClientRect();
+        const isNearTarget = (
+          event.clientX >= rect.left &&
+          event.clientX <= rect.right &&
+          event.clientY >= rect.top &&
+          event.clientY <= rect.bottom
+        );
+        
+        if (!isNearTarget) {
+          dragTarget.classList.remove('drag-over');
+        }
       }
     }
   });
 
   document.addEventListener('dragend', function(event) {
-    // Clean up after drag ends
-    setTimeout(() => {
-      hideDragTarget();
-      currentDraggedUrl = null;
-    }, 300);
+    // Only clean up if the extension is enabled
+    if (settings.popLinksEnabled !== false) {
+      // Clean up after drag ends
+      setTimeout(() => {
+        hideDragTarget();
+        currentDraggedUrl = null;
+      }, 300);
+    }
   });
 
   function showPopLinkModal(url, title) {

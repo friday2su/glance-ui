@@ -10,7 +10,7 @@
   max-width: 1300px; /* Increased max width */
   max-height: 950px; /* Increased max height */
   z-index: 2147483647; /* Maximum z-index value */
-  background: #1a1a1a;
+  background: #181818; /* Updated to match button color */
   border-radius: 16px;
   box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
   overflow: hidden;
@@ -48,12 +48,15 @@
   border-radius: 3px;
 }
 
-/* Control buttons outside the modal - positioned at top right */
+/* Control buttons outside the modal - positioned at fixed position */
 .glance-ui-pop-link-controls {
   display: flex;
   flex-direction: column-reverse; /* Reverse the order so open button is above close button */
   gap: 12px;
   z-index: 2147483648; /* Higher than modal */
+  position: fixed;
+  top: 20px;
+  right: 20px;
 }
 
 .glance-ui-pop-link-control-btn {
@@ -116,7 +119,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: transparent; /* Changed to transparent for clean blur only */
+  background: rgba(24, 24, 24, 0.8); /* Dark background with opacity to match #181818 */
   z-index: 2147483646; /* One less than modal */
   backdrop-filter: blur(10px); /* Increased blur for cleaner effect */
   transition: all 0.3s ease;

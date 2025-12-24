@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
       // Show success message
       statusDiv.textContent = 'Settings saved successfully!';
       statusDiv.className = 'status success';
+      statusDiv.style.display = 'block';
       
       // Hide message after 3 seconds
       setTimeout(function() {
@@ -45,6 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
       console.error('Error saving options:', error);
       statusDiv.textContent = 'Error saving settings';
       statusDiv.className = 'status error';
+      statusDiv.style.display = 'block';
       setTimeout(function() {
         statusDiv.style.display = 'none';
       }, 3000);

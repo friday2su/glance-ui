@@ -34,6 +34,8 @@ Glance UI transforms your browsing experience by enabling contextual link previe
 *   **Cross-Browser Support**: Fully compatible with Chrome and Firefox, ensuring a consistent experience across your preferred browsers.
 *   **Smart Controls**: Convenient circular control buttons positioned outside the modal for easy access to close and open-in-tab functions.
 *   **Customizable Settings**: Tailor the experience with adjustable modal width and animation preferences via the options panel.
+*   **Extension Toggle**: Easily enable or disable the extension via the toggle switch in the popup menu.
+*   **GitHub Support**: Show your support by starring the project on GitHub directly from the options page.
 *   **Responsive Design**: Adapts seamlessly to different screen sizes while maintaining optimal viewing experience.
 *   **Privacy Focused**: All functionality runs locally with no external tracking or data collection.
 *   **Lightweight**: Minimal resource usage with efficient code that activates only when needed.
