@@ -22,10 +22,9 @@
 </p>
 
 <p align="center">
-  <video width="800" height="300" controls>
-    <source src="assets/demo.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+  <a href="https://raw.githubusercontent.com/friday2su/glance-ui/main/assets/demo.mp4">
+    <img src="https://img.shields.io/badge/Demo-Video-blue?style=for-the-badge&logo=video" alt="Demo Video" style="max-width: 800px;">
+  </a>
 </p>
 
 <br>
