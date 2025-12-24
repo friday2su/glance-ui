@@ -4,7 +4,7 @@
   "description": "A browser extension that provides UI enhancements including pop links similar to Arc browser's Glance feature",
   "main": "background.js",
   "scripts": {
-    "pack": "zip -r extension.zip manifest.json *.js *.css *.html icons/ -x \"*.md\" \"test.html\" \"generate_icons.html\""
+    "pack": "bestzip extension.zip manifest.json background.js browser-polyfill.js content.css content.js options.html options.js popup.html popup.js icons/icon16.png icons/icon48.png icons/icon128.png -x \"*.md\""
   },
   "keywords": [
     "browser-extension",
@@ -14,5 +14,8 @@
     "ui-enhancement"
   ],
   "author": "Glance UI Team",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "bestzip": "^2.2.1"
+  }
 }

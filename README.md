@@ -47,14 +47,14 @@ Glance UI transforms your browsing experience by enabling contextual link previe
 1.  Type `about:config` in the address bar and accept the risk.
 2.  Search for `xpinstall.signatures.required`.
 3.  Toggle the value to `false`.
-4.  Download `glance-ui-firefox.xpi` from the [Releases](../../releases) page.
+4.  Download `glance-ui-firefox.xpi` from the [Releases](https://github.com/friday2su/glance-ui/releases) page.
 5.  Go to `about:addons`.
 6.  Click on the cogwheel and select "Install Add-on From File...".
 7.  Select the downloaded `.xpi` file.
 
 ### Chrome / Edge / Brave (From Release)
 
-1.  Navigate to the [Releases](../../releases) page.
+1.  Navigate to the [Releases](https://github.com/friday2su/glance-ui/releases) page.
 2.  Download the `extension.zip` asset from the latest version.
 3.  Extract the archive to a preferred location.
 4.  Open your browser's extensions page (`chrome://extensions` or `edge://extensions`).
