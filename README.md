@@ -21,11 +21,7 @@
   Preview links instantly without losing your place. Glance UI provides a seamless, secure, and intuitive modal experience for exploring content through elegant drag-and-drop interactions.
 </p>
 
-<p align="center">
-  <a href="https://raw.githubusercontent.com/friday2su/glance-ui/main/assets/demo.mp4">
-    <img src="https://img.shields.io/badge/Demo-Video-blue?style=for-the-badge&logo=video" alt="Demo Video" style="max-width: 800px;">
-  </a>
-</p>
+https://github.com/user-attachments/assets/c208c3fe-058f-4f47-b882-b36926fa0606
 
 <br>
 
