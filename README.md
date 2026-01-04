@@ -21,7 +21,14 @@
   Preview links instantly without losing your place. Glance UI provides a seamless, secure, and intuitive modal experience for exploring content through elegant drag-and-drop interactions.
 </p>
 
-https://github.com/user-attachments/assets/c208c3fe-058f-4f47-b882-b36926fa0606
+## Demo
+
+Experience Glance UI in action with this interactive demo:
+
+<video controls width="100%" poster="assets/demo.mp4">
+  <source src="https://github.com/user-attachments/assets/c208c3fe-058f-4f47-b882-b36926fa0606" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 <br>
 
@@ -31,16 +38,16 @@ Glance UI transforms your browsing experience by enabling contextual link previe
 
 ## Key Features
 
-*   **Intuitive Drag & Drop**: Effortlessly preview links by dragging them to the dedicated drop zone - no accidental triggers, just intentional previews.
-*   **Elegant Modal Design**: Immerse yourself in content with our sleek dark-themed modal featuring smooth animations and refined UI elements.
-*   **Cross-Browser Support**: Fully compatible with Chrome and Firefox, ensuring a consistent experience across your preferred browsers.
-*   **Smart Controls**: Convenient circular control buttons positioned outside the modal for easy access to close and open-in-tab functions.
-*   **Customizable Settings**: Tailor the experience with adjustable modal width and animation preferences via the options panel.
-*   **Extension Toggle**: Easily enable or disable the extension via the toggle switch in the popup menu.
-*   **GitHub Support**: Show your support by starring the project on GitHub directly from the options page.
-*   **Responsive Design**: Adapts seamlessly to different screen sizes while maintaining optimal viewing experience.
-*   **Privacy Focused**: All functionality runs locally with no external tracking or data collection.
-*   **Lightweight**: Minimal resource usage with efficient code that activates only when needed.
+- **Intuitive Drag & Drop**: Effortlessly preview links by dragging them to the dedicated drop zone - no accidental triggers, just intentional previews.
+- **Elegant Modal Design**: Immerse yourself in content with our sleek dark-themed modal featuring smooth animations and refined UI elements.
+- **Cross-Browser Support**: Fully compatible with Chrome and Firefox, ensuring a consistent experience across your preferred browsers.
+- **Smart Controls**: Convenient circular control buttons positioned outside the modal for easy access to close and open-in-tab functions.
+- **Customizable Settings**: Tailor the experience with adjustable modal width and animation preferences via the options panel.
+- **Extension Toggle**: Easily enable or disable the extension via the toggle switch in the popup menu.
+- **GitHub Support**: Show your support by starring the project on GitHub directly from the options page.
+- **Responsive Design**: Adapts seamlessly to different screen sizes while maintaining optimal viewing experience.
+- **Privacy Focused**: All functionality runs locally with no external tracking or data collection.
+- **Lightweight**: Minimal resource usage with efficient code that activates only when needed.
 
 ## Installation
 
@@ -107,19 +114,19 @@ Glance UI transforms your browsing experience by enabling contextual link previe
 
 ### Prerequisites
 
-*   Modern browser with extension development support
-*   Basic understanding of JavaScript and CSS
-*   Node.js 18+
-*   npm package manager
+- Modern browser with extension development support
+- Basic understanding of JavaScript and CSS
+- Node.js 18+
+- npm package manager
 
 ### Setup
 
 1. Clone the repository:
 
-    ```bash
-    git clone https://github.com/friday2su/glance-ui.git
-    cd glance-ui
-    ```
+   ```bash
+   git clone https://github.com/friday2su/glance-ui.git
+   cd glance-ui
+   ```
 
 2. Follow the installation instructions above to load the extension
 
@@ -138,12 +145,12 @@ Alternatively, you can manually compress the directory contents, ensuring to exc
 
 ### Architecture
 
-*   `manifest.json` - Extension configuration and permissions
-*   `content.js` - Core functionality for link previews
-*   `content.css` - Styling for modals and UI elements
-*   `background.js` - Extension lifecycle management
-*   `popup.html/js` - Toolbar popup interface
-*   `options.html/js` - Settings and preferences panel
+- `manifest.json` - Extension configuration and permissions
+- `content.js` - Core functionality for link previews
+- `content.css` - Styling for modals and UI elements
+- `background.js` - Extension lifecycle management
+- `popup.html/js` - Toolbar popup interface
+- `options.html/js` - Settings and preferences panel
 
 ## License
 
