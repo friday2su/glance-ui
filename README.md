@@ -22,13 +22,7 @@
 </p>
 
 ## Demo
-
-Experience Glance UI in action with this interactive demo:
-
-<video controls width="100%" poster="assets/demo.mp4">
-  <source src="https://github.com/user-attachments/assets/c208c3fe-058f-4f47-b882-b36926fa0606" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+https://github.com/user-attachments/assets/c208c3fe-058f-4f47-b882-b36926fa0606
 
 <br>
 
